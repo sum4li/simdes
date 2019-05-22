@@ -12,13 +12,12 @@ class setting_seeder extends Seeder
     public function run()
     {
         $faker = Faker\Factory::create();
-        $name=['Nama Toko','Alamat','Nomer Telepon','Email'];
-        $type=['text','text','text','text'];
+        $name=['Nama Desa','Kecamatan','Kabupaten'];
+        $type=['text','text','text'];
         $description=[
-            'Laundry',
-            'Kacangan, Andong, Boyolali',
-            '0812345678',
-            'laundry@laundry.com'
+            'Kacangan',
+            'Andong',
+            'Boyolali'
         ];
         for($i=0;$i<count($name);$i++){
 
