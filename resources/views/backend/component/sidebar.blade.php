@@ -25,6 +25,18 @@
     <div class="sidebar-heading">
         Addons
     </div>
+    <li class="nav-item {{active('religion.index')}}">
+        <a class="nav-link" href="{{route('religion.index')}}">
+            <i class="fas fa-fw fa-boxes"></i>
+            <span>Agama</span>
+        </a>
+    </li>
+    <li class="nav-item {{active('harmlet.index')}}">
+        <a class="nav-link" href="{{route('harmlet.index')}}">
+            <i class="fas fa-fw fa-boxes"></i>
+            <span>Dukuh</span>
+        </a>
+    </li>
     <li class="nav-item {{active('product.index')}}">
         <a class="nav-link" href="{{route('product.index')}}">
             <i class="fas fa-fw fa-boxes"></i>
