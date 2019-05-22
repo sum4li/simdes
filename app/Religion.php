@@ -14,6 +14,6 @@ class Religion extends Model
     protected $table="religions";
     protected $dates="deletes_at";
     protected $fillable=['name','slug'];
-    protected $incrementing=false;
+    public $incrementing=false;
 
 }
