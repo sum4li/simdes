@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateReligionsTable extends Migration
+class CreateHarmletsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateReligionsTable extends Migration
      */
     public function up()
     {
-        Schema::create('religions', function (Blueprint $table) {
+        Schema::create('harmlets', function (Blueprint $table) {
             $table->uuid('id');
             $table->string('name')->nullable()->default('text');
             $table->string('slug')->nullable()->default('text');
@@ -29,6 +29,6 @@ class CreateReligionsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('religions');
+        Schema::dropIfExists('harmlets');
     }
 }
