@@ -53,6 +53,16 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/admin/religion/store','ReligionController@store')->name('religion.store');
     Route::post('/admin/religion/{id}/update','ReligionController@update')->name('religion.update');
 
+    //harmlet
+    Route::get('/admin/harmlet','HarmletController@index')->name('harmlet.index');
+    Route::get('/admin/harmlet/create','HarmletController@create')->name('harmlet.create');
+    Route::get('/admin/harmlet/source','HarmletController@source')->name('harmlet.source');
+    Route::get('/admin/harmlet/{id}/edit','HarmletController@edit')->name('harmlet.edit');
+    Route::get('/admin/harmlet/{id}/show','HarmletController@show')->name('harmlet.show');
+    Route::get('/admin/harmlet/{id}/destroy','HarmletController@destroy')->name('harmlet.destroy');
+    Route::post('/admin/harmlet/store','HarmletController@store')->name('harmlet.store');
+    Route::post('/admin/harmlet/{id}/update','HarmletController@update')->name('harmlet.update');
+
 
 
     //product
