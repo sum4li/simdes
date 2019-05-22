@@ -19,16 +19,16 @@
 
 </head>
 
-<body class="bg-gradient-primary">
+<body class="bg-gray-900">
 
   <div class="container">
 
     <!-- Outer Row -->
     <div class="row justify-content-center">
 
-      <div class="col-lg-6">
+      <div class="col-lg-4">
 
-        <div class="card o-hidden border-0 shadow-lg my-5">
+        <div class="card o-hidden border-0 shadow-sm my-5 rounded-1">
           <div class="card-body p-5">
             @include('backend.component.success')
             @include('backend.component.error')
@@ -39,19 +39,19 @@
                   <div class="">
                     <div class="text-center">
                         <img src="{{asset('backend/img/logo.png')}}" width="100px">
-                    <h1 class="h4 text-gray-900 mb-4">Selamat Datang</h1>
+                    <h1 class="h4 text-gray-900 mb-4">SIMDES V.1.0</h1>
                   </div>
                   <form class="user" action="{{route('proceed-login')}}" method="POST">
                     @csrf
                     <div class="form-group">
                         <label>Username</label>
-                      <input type="text" class="form-control form-control-user" name="username" required="" autofocus="">
+                      <input type="text" class="form-control " name="username" required="" autofocus="">
                     </div>
                     <div class="form-group">
                             <label>Password</label>
-                      <input type="password" class="form-control form-control-user" name="password" required="">
+                      <input type="password" class="form-control " name="password" required="">
                     </div>
-                    <button type="submit" class="btn btn-primary btn-user btn-block">
+                    <button type="submit" class="btn btn-primary btn-block">
                       Login
                     </button>
                   </form>
@@ -59,6 +59,9 @@
                 </div>
               </div>
             </div>
+          </div>
+          <div class="card-footer bg-white text-center">
+              Made By <a href="http://digsa.id" target="_blank">Digsa.id</a>  with <i class="fa fa-heart text-danger"></i>
           </div>
         </div>
 
