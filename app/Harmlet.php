@@ -14,5 +14,5 @@ class Harmlet extends Model
     protected $table = 'harmlets';
     protected $dates = 'deleted_at';
     protected $fillable = ['name','slug'];
-    protected $incrementing = false;
+    public $incrementing = false;
 }
