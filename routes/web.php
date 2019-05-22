@@ -43,6 +43,16 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/admin/role/store','RoleController@store')->name('role.store');
     Route::post('/admin/role/{id}/update','RoleController@update')->name('role.update');
 
+    //religion
+    Route::get('/admin/religion','ReligionController@index')->name('religion.index');
+    Route::get('/admin/religion/create','ReligionController@create')->name('religion.create');
+    Route::get('/admin/religion/source','ReligionController@source')->name('religion.source');
+    Route::get('/admin/religion/{id}/edit','ReligionController@edit')->name('religion.edit');
+    Route::get('/admin/religion/{id}/show','ReligionController@show')->name('religion.show');
+    Route::get('/admin/religion/{id}/destroy','ReligionController@destroy')->name('religion.destroy');
+    Route::post('/admin/religion/store','ReligionController@store')->name('religion.store');
+    Route::post('/admin/religion/{id}/update','ReligionController@update')->name('religion.update');
+
 
 
     //product
