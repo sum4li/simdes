@@ -12,7 +12,7 @@ class Religion extends Model
     use SoftDeletes;
 
     protected $table="religions";
-    protected $dates="deletes_at";
+    protected $dates=["deletes_at"];
     protected $fillable=['name','slug'];
     public $incrementing=false;
 

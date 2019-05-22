@@ -12,7 +12,7 @@ class Harmlet extends Model
     use SoftDeletes;
 
     protected $table = 'harmlets';
-    protected $dates = 'deleted_at';
+    protected $dates = ['deleted_at'];
     protected $fillable = ['name','slug'];
     public $incrementing = false;
 }
