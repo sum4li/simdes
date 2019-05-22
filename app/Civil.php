@@ -14,7 +14,7 @@ class Civil extends Model
     protected $table = 'civils';
     protected $dates = 'deleted_at';
     protected $fillable = ['religion_id','harmlet_id','nkk','nik','name','birth_date','sex','marital_status','address','rt','rw','death_status'];
-    protected $incrementing = false;
+    public $incrementing = false;
 
     public function religion()
     {
