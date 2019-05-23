@@ -20,6 +20,7 @@ class CreateCivilsTable extends Migration
             $table->string('nkk',20)->nullable()->default('text');
             $table->string('nik')->nullable()->default('text');
             $table->string('name')->nullable()->default('text');
+            $table->string('birth_place')->nullable()->default('text');
             $table->date('birth_date')->nullable();
             $table->string('sex',15)->nullable()->default('text');
             $table->string('marital_status',20)->nullable()->default('text');
