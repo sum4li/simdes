@@ -63,6 +63,16 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/admin/harmlet/store','HarmletController@store')->name('harmlet.store');
     Route::post('/admin/harmlet/{id}/update','HarmletController@update')->name('harmlet.update');
 
+    //civil
+    Route::get('/admin/civil','CivilController@index')->name('civil.index');
+    Route::get('/admin/civil/create','CivilController@create')->name('civil.create');
+    Route::get('/admin/civil/source','CivilController@source')->name('civil.source');
+    Route::get('/admin/civil/{id}/edit','CivilController@edit')->name('civil.edit');
+    Route::get('/admin/civil/{id}/show','CivilController@show')->name('civil.show');
+    Route::get('/admin/civil/{id}/destroy','CivilController@destroy')->name('civil.destroy');
+    Route::post('/admin/civil/store','CivilController@store')->name('civil.store');
+    Route::post('/admin/civil/{id}/update','CivilController@update')->name('civil.update');
+
 
 
     //product
