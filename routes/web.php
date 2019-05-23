@@ -53,15 +53,15 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/admin/religion/store','ReligionController@store')->name('religion.store');
     Route::post('/admin/religion/{id}/update','ReligionController@update')->name('religion.update');
 
-    //harmlet
-    Route::get('/admin/harmlet','HarmletController@index')->name('harmlet.index');
-    Route::get('/admin/harmlet/create','HarmletController@create')->name('harmlet.create');
-    Route::get('/admin/harmlet/source','HarmletController@source')->name('harmlet.source');
-    Route::get('/admin/harmlet/{id}/edit','HarmletController@edit')->name('harmlet.edit');
-    Route::get('/admin/harmlet/{id}/show','HarmletController@show')->name('harmlet.show');
-    Route::get('/admin/harmlet/{id}/destroy','HarmletController@destroy')->name('harmlet.destroy');
-    Route::post('/admin/harmlet/store','HarmletController@store')->name('harmlet.store');
-    Route::post('/admin/harmlet/{id}/update','HarmletController@update')->name('harmlet.update');
+    //hamlet
+    Route::get('/admin/hamlet','HamletController@index')->name('hamlet.index');
+    Route::get('/admin/hamlet/create','HamletController@create')->name('hamlet.create');
+    Route::get('/admin/hamlet/source','HamletController@source')->name('hamlet.source');
+    Route::get('/admin/hamlet/{id}/edit','HamletController@edit')->name('hamlet.edit');
+    Route::get('/admin/hamlet/{id}/show','HamletController@show')->name('hamlet.show');
+    Route::get('/admin/hamlet/{id}/destroy','HamletController@destroy')->name('hamlet.destroy');
+    Route::post('/admin/hamlet/store','HamletController@store')->name('hamlet.store');
+    Route::post('/admin/hamlet/{id}/update','HamletController@update')->name('hamlet.update');
 
     //civil
     Route::get('/admin/civil','CivilController@index')->name('civil.index');
