@@ -14,7 +14,7 @@
                     <div class="col">
                         <div class="form-group">
                           <label>NIK</label>
-                          <input type="text" name="nik" id="" class="form-control border-dark-50" required="">
+                          <input type="text" name="nik" id="" class="form-control border-dark-50 nik" required="">
                         </div>
                     </div>
                     <div class="col">
@@ -34,7 +34,7 @@
                     <div class="col">
                         <div class="form-group">
                           <label>Tanggal Lahir</label>
-                          <input type="text" name="birth_date" id="" class="form-control border-dark-50" required="">
+                          <input type="text" name="birth_date" id="" class="form-control border-dark-50 datepicker" required="">
                         </div>
                     </div>
                 </div>
@@ -42,7 +42,7 @@
                     <div class="col">
                         <div class="form-group">
                           <label>Jenis Kelamin</label>
-                          <select name="sex" class="form-control" required="">
+                          <select name="sex" class="custom-select" required="">
                               <option value="laki-laki">Laki-Laki</option>
                               <option value="perempuan">Perempuan</option>
                           </select>
@@ -51,7 +51,7 @@
                     <div class="col">
                         <div class="form-group">
                           <label>Status Perkawinan</label>
-                          <select name="marital_status" class="form-control" required="">
+                          <select name="marital_status" class="custom-select" required="">
                                 <option value="belum kawin">Belum Kawin/Menikah</option>
                                 <option value="kawin">Kawin/Menikah</option>
                                 <option value="janda">Janda</option>
@@ -69,14 +69,24 @@
                     </div>
                     <div class="col-lg-2">
                         <div class="form-group">
+                          <label>Dukuh</label>
+                          <select name="hamlet_id" class="custom-select" required="">
+                              @foreach (App\Hamlet::orderBy('name')->get() as $row)
+                              <option value="{{$row->id}}">{{title_case($row->name)}}</option>
+                              @endforeach
+                          </select>
+                        </div>
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="form-group">
                           <label>RT</label>
-                          <input type="text" name="birth_date" id="" class="form-control border-dark-50" required="">
+                          <input type="text" name="birth_date" id="" class="form-control border-dark-50 rt" required="">
                         </div>
                     </div>
                     <div class="col-lg-2">
                         <div class="form-group">
                           <label>RW</label>
-                          <input type="text" name="birth_date" id="" class="form-control border-dark-50" required="">
+                          <input type="text" name="birth_date" id="" class="form-control border-dark-50 rw" required="">
                         </div>
                     </div>
                 </div>
@@ -94,3 +104,21 @@
     </div>
 </div>
 @endsection
+@push('scripts')
+<script src="{{asset('backend/js/jquery.mask.min.js')}}" type="text/javascript"></script>
+<script>
+    $(document).ready(function(){
+        $('.nik').mask('999999999999999999',{placeholder: 'Harus Angka'});
+        $('.rt').mask('999',{placeholder: 'Harus Angka'});
+        $('.rw').mask('999',{placeholder: 'Harus Angka'});
+
+        $('.datepicker').datepicker({
+            format : 'yyyy-mm-dd',
+            autoclose: true,
+            todayHighlight:true
+        });
+
+    });
+</script>
+
+@endpush
