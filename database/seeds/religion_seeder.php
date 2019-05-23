@@ -15,7 +15,7 @@ class religion_seeder extends Seeder
 
 
         for($i=0;$i<count($name);$i++){
-            App\Product::create([
+            App\Religion::create([
                 'name'=> $name[$i],
                 'slug'=> str_slug($name[$i])
             ]);
