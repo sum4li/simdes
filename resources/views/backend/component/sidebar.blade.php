@@ -3,7 +3,7 @@
 
     <!-- Sidebar - Brand -->
     <a class="sidebar-brand d-flex align-items-left justify-content-left" href="#">
-        <div class="sidebar-brand-text">{{App\Setting::where('slug','nama-toko')->get()->first()->description}}</div>
+        <div class="sidebar-brand-text">SIMDES</div>
     </a>
 
     <!-- Divider -->
