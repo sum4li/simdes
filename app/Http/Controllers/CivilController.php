@@ -24,6 +24,7 @@ class CivilController extends Controller
 
     public function source(){
         $query= Civil::query();
+        $query->where('death_status','hidup');
         return DataTables::eloquent($query)
         ->filter(function ($query) {
             if (request()->has('search')) {
@@ -41,8 +42,8 @@ class CivilController extends Controller
             ->addColumn('address', function ($data) {
                 return title_case($data->address);
             })
-            ->addColumn('harmlet', function ($data) {
-                return title_case($data->harmlet->name);
+            ->addColumn('hamlet', function ($data) {
+                return title_case($data->hamlet->name);
             })
             ->addIndexColumn()
             ->addColumn('action', 'backend.civil.index-action')
@@ -59,10 +60,11 @@ class CivilController extends Controller
     {
         DB::beginTransaction();
         try {
-            $requset = $request->merge(['slug'=>$request->name]);
+            $request->merge(['slug'=>$request->name,'death_status'=>'hidup']);
             $this->civil->create($request->all());
             DB::commit();
             return redirect()->route('civil.index')->with('success-message','Data telah disimpan');
+            // return $request->all();
         } catch (\Exception $e) {
             DB::rollback();
             return redirect()->back()->with('error-message',$e->getMessage());
@@ -73,7 +75,7 @@ class CivilController extends Controller
     public function show($id)
     {
         $data = $this->civil->find($id);
-        return $data;
+        return view('backend.civil.show',compact(['data']));
 
     }
 
@@ -108,7 +110,7 @@ class CivilController extends Controller
     public function getCivil(Request $request){
         if ($request->has('search')) {
             $cari = $request->search;
-    		$data = $this->civil->where('name', 'LIKE', '%'.$cari.'%')->get();
+    		$data = $this->civil->where('death_status','hidup')->where('name', 'LIKE', '%'.$cari.'%')->get();
             return response()->json($data);
     	}
     }

@@ -16,18 +16,18 @@ class CreateCivilsTable extends Migration
         Schema::create('civils', function (Blueprint $table) {
             $table->uuid('id');
             $table->uuid('religion_id');
-            $table->uuid('harmlet_id');
-            $table->string('nkk',20)->nullable()->default('text');
-            $table->string('nik')->nullable()->default('text');
-            $table->string('name')->nullable()->default('text');
-            $table->string('birth_place')->nullable()->default('text');
+            $table->uuid('hamlet_id');
+            $table->string('nkk',20)->nullable();
+            $table->string('nik')->nullable();
+            $table->string('name')->nullable();
+            $table->string('birth_place')->nullable();
             $table->date('birth_date')->nullable();
             $table->string('sex',15)->nullable()->default('text');
             $table->string('marital_status',20)->nullable()->default('text');
             $table->string('address')->nullable()->default('text');
             $table->string('rt', 10)->nullable()->default('text');
             $table->string('rw', 10)->nullable()->default('text');
-            $table->string('death_status',20)->nullable()->default('text');
+            $table->string('death_status',20)->nullable()->default('hidup');
             $table->softDeletes();
             $table->timestamps();
         });

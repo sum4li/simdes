@@ -11,44 +11,50 @@
             <form action="{{route('civil.store')}}" method="post" enctype="multipart/form-data">
                 @csrf
                 <div class="row">
-                    <div class="col">
+                    <div class="col-6">
                         <div class="form-group">
                           <label>NIK</label>
-                          <input type="text" name="nik" id="" class="form-control border-dark-50 nik" required="">
+                          <input type="text" name="nik" id="" class="form-control border-dark-50 nik" required="" autofocus="">
                         </div>
                     </div>
-                    <div class="col">
+                    <div class="col-6">
                         <div class="form-group">
                           <label>Nama</label>
                           <input type="text" name="name" id="" class="form-control border-dark-50" required="">
                         </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col">
+                    <div class="col-3">
                         <div class="form-group">
-                          <label>Tempat Lahir</label>
-                          <input type="text" name="birth_place" id="" class="form-control border-dark-50" required="">
+                            <label>Tempat Lahir</label>
+                            <input type="text" name="birth_place" id="" class="form-control border-dark-50" required="">
                         </div>
                     </div>
-                    <div class="col">
+                    <div class="col-3">
                         <div class="form-group">
-                          <label>Tanggal Lahir</label>
-                          <input type="text" name="birth_date" id="" class="form-control border-dark-50 datepicker" required="">
+                            <label>Tanggal Lahir</label>
+                            <input type="text" name="birth_date" id="" class="form-control border-dark-50 datepicker" required="">
                         </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col">
+                    <div class="col-3">
                         <div class="form-group">
-                          <label>Jenis Kelamin</label>
-                          <select name="sex" class="custom-select" required="">
-                              <option value="laki-laki">Laki-Laki</option>
-                              <option value="perempuan">Perempuan</option>
+                            <label>Jenis Kelamin</label>
+                            <select name="sex" class="custom-select" required="">
+                                <option value="laki-laki">Laki-Laki</option>
+                                <option value="perempuan">Perempuan</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="form-group">
+                          <label>Agama</label>
+                          <select name="religion_id" class="custom-select" required="">
+                              @foreach (App\Religion::get() as $row)
+                                  <option value="{{$row->id}}">{{title_case($row->name)}}</option>
+                              @endforeach
                           </select>
                         </div>
                     </div>
-                    <div class="col">
+                    <div class="col-6">
                         <div class="form-group">
                           <label>Status Perkawinan</label>
                           <select name="marital_status" class="custom-select" required="">
@@ -59,7 +65,14 @@
                           </select>
                         </div>
                     </div>
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label>Pekerjaan</label>
+                            <input type="text" name="job" id="" class="form-control border-dark-50" required="">
+                        </div>
+                    </div>
                 </div>
+
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="form-group">
@@ -80,13 +93,13 @@
                     <div class="col-lg-2">
                         <div class="form-group">
                           <label>RT</label>
-                          <input type="text" name="birth_date" id="" class="form-control border-dark-50 rt" required="">
+                          <input type="text" name="rt" id="" class="form-control border-dark-50 rt" required="">
                         </div>
                     </div>
                     <div class="col-lg-2">
                         <div class="form-group">
                           <label>RW</label>
-                          <input type="text" name="birth_date" id="" class="form-control border-dark-50 rw" required="">
+                          <input type="text" name="rw" id="" class="form-control border-dark-50 rw" required="">
                         </div>
                     </div>
                 </div>

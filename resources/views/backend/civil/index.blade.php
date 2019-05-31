@@ -42,7 +42,7 @@ $(document).ready(function () {
             {data: 'nik', name: 'nik',width:"10%", orderable : false},
             {data: 'name', name: 'name',width:"15%", orderable : true},
             {data: 'address', name: 'address',width:"10%", orderable : false},
-            {data: 'harmlet', name: 'harmlet',width:"10%", orderable : false},
+            {data: 'hamlet', name: 'hamlet',width:"10%", orderable : false},
             {data: 'action', name: 'action',width:"5%", orderable : false}
          ]
      });

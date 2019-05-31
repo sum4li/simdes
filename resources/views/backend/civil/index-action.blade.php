@@ -1,3 +1,10 @@
+<a href="{{route('civil.show',[$id])}}"
+    class="btn btn-info btn-sm shadow-sm"
+    data-toggle="tooltip"
+    data-placement="top"
+    title="Detail">
+    <i class="fa fa-eye"></i>
+</a>
 <a href="{{route('civil.edit',[$id])}}"
     class="btn btn-success btn-sm shadow-sm"
     data-toggle="tooltip"
