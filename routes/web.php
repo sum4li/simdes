@@ -73,6 +73,17 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/admin/civil/store','CivilController@store')->name('civil.store');
     Route::post('/admin/civil/{id}/update','CivilController@update')->name('civil.update');
 
+    //mortality
+    Route::get('/admin/mortality','MortalityController@index')->name('mortality.index');
+    Route::get('/admin/mortality/create','MortalityController@create')->name('mortality.create');
+    Route::get('/admin/mortality/source','MortalityController@source')->name('mortality.source');
+    Route::get('/admin/mortality/{id}/edit','MortalityController@edit')->name('mortality.edit');
+    Route::get('/admin/mortality/{id}/show','MortalityController@show')->name('mortality.show');
+    Route::get('/admin/mortality/{id}/destroy','MortalityController@destroy')->name('mortality.destroy');
+    Route::get('/admin/civil/getCivil','CivilController@getCivil')->name('civil.getCivil');
+    Route::post('/admin/mortality/store','MortalityController@store')->name('mortality.store');
+    Route::post('/admin/mortality/{id}/update','MortalityController@update')->name('mortality.update');
+
 
 
     //product
