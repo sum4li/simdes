@@ -32,8 +32,8 @@
                     <div class="row">
                         <div class="col">
                             <div class="form-gorup">
-                                <button type="submit" class="btn btn-primary">Simpan</button>
-                                <a class="btn btn-light" href="{{route('dashboard')}}">Batal</a>
+                                <button type="submit" class="btn btn-primary shadow-sm">Simpan</button>
+                                <a class="btn btn-light shadow-sm" href="{{route('dashboard')}}">Batal</a>
                             </div>
                         </div>
                     </div>
