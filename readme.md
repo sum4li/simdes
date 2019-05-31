@@ -1,6 +1,6 @@
 ## SIMDES
 
-![](screenshoot/Login.png)
+![](screenshoot/login.png)
 
 Aplikasi SISTEM INFORMASI MANAGEMENT DESA berbasis web dibangun dengan laravel 5.8 dan Mysql
 
