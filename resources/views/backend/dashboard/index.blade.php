@@ -52,11 +52,26 @@
             <h6 class="m-0 font-weight-bold text-primary">Transaksi Tahun {{date('Y')}}</h6>
         </div>
         <div class="card-body">
-                {!! $chartjs->render() !!}
+                {{-- {!! $chartjs->render() !!} --}}
         </div>
     </div>
+</div>
+<div>
+    <ul id="religion" class="list">
+
+    </ul>
 </div>
 @endsection
 @push('scripts')
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js" type="text/javascript"></script>
+    <script>
+        $(document).ready(function(){
+            // $.getJSON('http://127.0.0.1:8000/api/religion',function(data){
+            //     // console.log(data);
+            //     $.each(data.data, function (index, value) {
+            //         $('#religion').append('<li>'+value.name+'</li>')
+            //     });
+            // })
+        });
+    </script>
 @endpush
