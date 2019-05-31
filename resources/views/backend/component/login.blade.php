@@ -61,7 +61,7 @@
             </div>
           </div>
           <div class="card-footer bg-white text-center">
-              Made By <a href="http://digsa.id" target="_blank">Digsa.id</a>  with <i class="fa fa-heart text-danger"></i>
+              Made with <i class="fa fa-heart text-danger"></i> By <a href="http://digsa.id" target="_blank">Digsa.id</a>
           </div>
         </div>
 
